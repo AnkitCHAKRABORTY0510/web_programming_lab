@@ -1,0 +1,82 @@
+<!--
+    1. Create a WebPage to demonstrate the following <form> elements:
+	a. <fieldset> and <legend>
+	b. input types: date, file and color
+	c. <datalist>
+	d. <optgroup>
+
+2. Create a WebPage to generate a form shown below. The form should have the following features:
+	a. the first two textboxes must not allow input of more than 10 characters.
+	b. The contents of the third textbox should not be modifiable. 
+	c. Clicking on the AC Button should clear the contents of the first two textboxes.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB WORK 3</title>
+    <script src="lab-3.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend align ="center"><h1>Person Details</h1></legend>
+
+        <form name="Person Details" method="post" autocomplete="on">
+            
+            <label for="First_name"> First Name:</label>
+            <input type="text" id="first_name" placeholder="Enter First Name" maxlength="10">
+            <label for="LAST_name"> Last Name:</label>
+            <input type="text" id="first_name" placeholder="Enter Last Name" maxlength="10"><br>
+           
+            <button type="reset" id="name_reset">Reset Name</button><br><br>
+            
+            <label for="DOB"> Date-of-Birth:</label>
+            <input type="date" id="date-of-birth"><br>
+            
+            <label for="Age">Age: </label>
+            <input type="number" id="age" readonly><br>
+            <input type="button" value ="calculate" id="calculate"onclick="calculate_age();"></button>
+            
+            <br><br>
+            <label for="color">Colour:</label>
+            <input type="color" id="Color" value="#dd5500"><br>
+           
+            <label for="file">Certificate: </label>
+            <input type="file" id="Certificate"><br>
+
+            
+            <!--DATA LIST AND OPT-GROUP-->
+            
+            <label for="Semester"> SELECT Semester :</label>
+            <select name="semester" id="semester_list">
+    
+            <datalist id="semester_list">    
+                <optgroup label="FIRST YEAR">
+                    <option value="1st semester">1<sup>st</sup> Semester</option>
+                    <option value="2nd semester">2<sup>nd</sup> Semester</option>
+                </optgroup>
+                <optgroup label="SECOND YEAR">
+                    <option value="3rd semester">3<sup>rd</sup> Semester</option>
+                    <option value="4th semester">4<sup>th</sup> Semester</option>
+                </optgroup>
+                <optgroup label="THIRD YEAR">
+                    <option value="5th semester">5<sup>th</sup> Semester</option>
+                    <option value="6th semester">6<sup>th</sup> Semester</option>
+                </optgroup>
+                <optgroup label="FOURTH YEAR">
+                    <option value="7th semester">7<sup>th</sup> Semester</option>
+                    <option value="8th semester">8<sup>th</sup> Semester</option>
+                </optgroup>
+            </datalist>
+        
+        </select>
+        <br><br>
+        <button type="submit" id="form_submit">Submit</button>
+        <button type="reset" id="form_reset">Reset</button>
+    </form>
+    
+    </fieldset>
+
+</body>
+</html>
