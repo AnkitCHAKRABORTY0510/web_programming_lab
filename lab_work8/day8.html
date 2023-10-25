@@ -1,1 +1,101 @@
+<!--
+    1. Create a web page to demostrate the use of javaScript alert(), confirm(),and prompt()
+    2. Using JavaScript ,check if a given integer is positive , negative ,or neither (i.e Zero)
+    3. Using JavaScript ,check if a given positive integer is prime or not.
+    4. Using JavaScript ,calculate and print the first 20 numbers of the Fibonacci Series.
+-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 7</title>
+    <script>
+        alert("ALERT AS HELLO");
+        confirm("this is a confirm");
+    </script>
+</head>
+<body>
+    <!-- <script><input type="button" value="OK" onclick="confirm('this is form confirm')"></input>
+    </script> -->
+    <button onclick="pos_neg()">positive/negtative/neither</button>
+
+    <p id="output1"></p>
+
+    <button onclick="is_prime()">IS PRIME</button>
+
+    <p id="output2"></p>
+
+    <button onclick="fibonacci()">fibonacci series of 20 number</button>
+
+    <p id="output3"></p>
+
+    <script>
+       
+        
+    function pos_neg() 
+    {
+        let my_integer;
+        my_integer= prompt("ENTER INTEGER","");
+        
+            if (my_integer > 0)
+            document.getElementById("output1").innerHTML = "positive";
+            else if(my_integer<0)
+            document.getElementById("output1").innerHTML = "negative";
+            else
+            document.getElementById("output1").innerHTML = "neither";
+    }
+
+    function is_prime()
+    {
+        let var1 = parseInt( prompt("ENTER INTEGER",""));
+      
+        let count=0;
+
+        if (var1 < 2 )
+        {
+            document.getElementById("output2").innerHTML = "neither prime nor composite";
+        }
+        else        
+        {
+            for (let i=2; i <var1; i++)
+            {
+                if((var1%i)===0)
+                {
+                    count++;
+                }
+            }
+
+            if(count!=0)
+                {
+                    document.getElementById("output2").innerHTML = "composite";   
+                    
+                }
+                else
+                {
+                    document.getElementById("output2").innerHTML = "prime";
+                }    
+        }
+        
+    }
+
+    function fibonacci()
+    {
+        let a=1,b=1,next;
+        let text="1<br>1<br>";
+
+        for (let i=0;i<18;i++)
+        {
+        
+            next=a+b;
+            text= text + next + "<br>";
+            a=b;
+            b=next;
+        }
+
+        document.getElementById("output3").innerHTML = text;
+    }
+    </script>
+</body>
+</html>
