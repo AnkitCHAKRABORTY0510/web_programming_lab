@@ -1,0 +1,94 @@
+<!--
+    lab work:
+    1. Add functionality to a 'Simple Calculator' created in day 5,so that the arithematic 
+    operations can be carried out. you may also add some styling so that the numbers and 
+	the components are properly aligned, and are of proper size.
+-->
+<!doctype HTML>
+<html lang="en">
+	<head>
+		<title>calculator</title>
+		<meta charset="utf-8">
+	</head>
+    <style>
+        .calculator{
+            margin: auto;
+            width: 25%;
+            background-color: rgba(45, 45, 45, 0.5);
+            padding: 20px;
+            
+        }
+       
+    </style>
+	<body>
+		<script>
+			let result = 0;
+			function add()
+			{
+				let a=document.calculator.input1.value;
+				let b=document.calculator.input2.value;
+				a=parseFloat(a);
+				b=parseFloat(b);
+				result = (a+b);
+				document.getElementById("output").value=result;
+			}
+            
+			function sub()
+			{
+				let a=document.calculator.input1.value;
+				let b=document.calculator.input2.value;
+				a=parseFloat(a);
+				b=parseFloat(b);
+				result = (a-b);
+				document.getElementById("output").value=result;
+			}
+			function mul()
+			{
+				let a=document.calculator.input1.value;
+				let b=document.calculator.input2.value;
+				a=parseFloat(a);
+				b=parseFloat(b);
+				result = (a*b);
+				
+				document.getElementById("output").value=result;
+			}
+			function div()
+			{
+				let a=document.calculator.input1.value;
+				let b=document.calculator.input2.value;
+				a=parseFloat(a);
+				b=parseFloat(b);
+				result = (a/b);
+				
+				document.getElementById("output").value=result;
+		
+			}
+            function ac()
+            {
+                document.calculator.output=0;
+                document.calculator.input1.value=0;
+                document.calculator.input2.value=0;
+                
+            }
+		</script>
+        <h2 align="center"> CALCULATOR</h2>
+        <br>
+        
+		<div class = "calculator">
+            <form method="get" name="calculator" >
+			<input type="text" placeholder="Enter number 1" name="input1" maxlength="30" style="background-color:bisque; height:10px">
+			<input type="text" placeholder="Enter number 2" name="input2" maxlength="30" style="background-color:bisque; height:10px"><br>
+			<input type="text" placeholder="ANSWER" id="output" readonly style="background-color:bisque; height: 10px; margin-left: 80px"><br>
+			<div style="margin-left: 85px;">
+            
+			<input type="button" value="+" onclick="add();">
+			<input type="button" value="-" onclick="sub();">
+			<input type="button" value="*" onclick="mul();">
+			<input type="button" value="/"  onclick="div();">
+            <input type="reset" value="AC"onclick="ac();">
+            </div>
+		<br>
+		</form>
+        </div>
+    </body>
+</html>
