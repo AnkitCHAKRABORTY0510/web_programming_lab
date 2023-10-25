@@ -1,1 +1,63 @@
-l
+<!--
+    lab-work-4
+
+    1.Create a Web Page to show how to load a HTML document in an iframe, when the user clicks on the link (i.e iFrame 
+    as the target of a link.)
+    2.Create a web page to show how to play a youtube video in a page.
+    3.Create a web page to play a video file in the page.
+    4.Create a web page to show how to include a Favicon.
+!-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <link rel="icon" type="w3schools-logo" href="W3school.ico">
+</head>
+<body>
+    <!--
+        inline frame in HTML<iframe>
+            image map in html
+            playing audio and video in a webpage;<audio>, <video>
+            page redirect in HTML
+            Semantic element in HTML
+    -->
+
+
+    <pr>
+        Use of image map in html.
+
+       <h1 align ="center"> LAB 4 .</h1>
+    </pr>
+   <br>
+    <img src="image_map.png" alt="web-programming" usemap="#web-programming" align="center">
+   
+    <map name="web-programming">
+        <area shape="poly" coords="83,147,83,260,179,316,178,202  " alt="css" href="https://www.w3schools.com/css/">
+        <area shape="poly" coords="180,204,180,315,277,261,277,146" alt="Html" href="https://www.w3schools.com/html/">
+        <area shape="poly" coords="180,91,83,148,179,203,277,145" alt="js" href="https://www.w3schools.com/js">
+    </map>
+    <br>
+    <iframe src="lab/00-2lab.html" name="last_work" title="iframe_example"> "here is my previous work" </iframe>
+    <br>
+    <a href="lab/00-1lab.html" target="last_work">Test Link</a>
+    <br>
+    <h3 align="center">
+       Playing youtube video in webpage
+    </h3>
+    <br>
+    <iframe width="600" height="600" src="https://www.youtube.com/embed/K4TOrB7at0Y?si=bljqxrm0I7HNI6Gw" title="YouTube video player" ></iframe>
+    <br>
+    <h4 align="center">Playing videos in webpage</h4>
+    <video width="720" height="500" controls>
+        <source src="sample_video.mp4" type="video/mp4">
+        <source src="sample_video.ogg" type="video/ogg"
+        
+      Your browser does not support the video tag.
+    </video>
+</body>
+</html>
