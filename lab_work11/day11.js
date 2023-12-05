@@ -4,7 +4,7 @@ function check()
         var debit1=document.calc.debit1.value;
         if(name.length<1)
         {
-                alert("Empty");
+                alert("Enter name");
         }
         var card = /^(?:[1-9]{1}[0-9]{15})$/;
         if (!(debit1.match(card)))
