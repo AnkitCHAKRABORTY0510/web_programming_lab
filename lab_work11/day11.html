@@ -1,0 +1,38 @@
+<!--
+    LAB WORK-11:
+    1. Create a Web Page containing an image. When the user moves the pointer over an the image , the image should change to a new image.
+    When the mouse pointer is moved away from the image , the original image should be shown. Use JavaScript for the implementation.
+    
+    2.Create a web page to do form validation using JavaScript. Create a form for entering credit and debit card details. It should have name
+    field, card number ,field, and an expiry date (month & year ). use JavaScript to do the following :
+        
+        . The name field must not be blank
+        . The card number field must have 16 digits
+        . The month in the expiry date field must only take values from 1 to 12
+        . The year in the expiry date field must only accept two digits.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab-11</title>
+    <script src="day11.js"></script>
+</head>
+<body>
+    <img height="250px" width="330px" src="SBI-EMV-Chip.jpg.webp" onmouseover="src='contactless-debit-card-visa.png'" onmouseout="this.src='SBI-EMV-Chip.jpg.webp'">
+    <form method="post" id =myform name="calc" onsubmit="return check()">
+        <h3 style="align-items: center;"> Personal Details</h3><br><br>
+        <label>Name : </label>
+        <input type="text" name="name1" required="required" placeholder="Enter name"><br><br>
+        <label>Debit Card No. : </label>
+        <input type="text" name="debit1" required="required" placeholder="16-Digit card number"><br><br><br>
+        <h3 style="align-items: center;"> Expiry Date </h3><br><br>
+        <label>Month : </label>
+        <input type="text" name="m1" required="required" placeholder="1-12" >
+        <label>Year : </label>
+        <input type="text" name="yr1" required="required" placeholder="yy" ><br><br>
+        <input type="submit" value="submit" onClick="check();">
+</form>
+</body>
+</html>
